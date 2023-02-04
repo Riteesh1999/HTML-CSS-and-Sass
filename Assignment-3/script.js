@@ -138,7 +138,7 @@ function Checked(x) {
     console.log(document.getElementById("button").disabled);
   } else {
     document.getElementById("button").disabled = false;
-    document.getElementById("button").style.backgroundColor = "orange";
+    document.getElementById("button").style.backgroundColor = "#a7c942";
     console.log(document.getElementById("button").disabled);
   }
 }
