@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback</title>
+    <style>
+      label {
+        float: left;
+        width: 150px;
+      }
+      #container {
+        width: 700px;
+        margin: 1em;
+        background-color: rgb(85, 92, 167);
+      }
+      main {
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>Feedback</h2>
+        <h3>Want to know where you are heading? Come join Us!!!</h3>
+        Note : Fields marked with an asterisk(*) are mandatory
+        <br /><br />
+
+        <form id="myform" method="SET" action="Submit.html">
+          <label>Title*:</label>
+          <input
+            type="radio"
+            name="title"
+            id="miss"
+            value="miss"
+            required="required"
+          />Miss
+          <input
+            type="radio"
+            name="title"
+            id="mr"
+            value="mr"
+            required="required"
+          />Mr.
+          <input
+            type="radio"
+            name="title"
+            id="mrs"
+            value="mrs"
+            required="required"
+          />Mrs. <br /><br />
+
+          <label for="firstName">First Name*:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+            autocomplete="off"
+            onblur="validateInputs(this,1)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgFName" style="display: none; color: red">
+            Invalid input for the first name. Only text are allowed
+            <br /><br />
+          </div>
+
+          <label for="lastName">Last Name*:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+            autocomplete="off"
+            onblur="validateInputs(this,2)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgLName" style="display: none; color: red">
+            Invalid input for the last name. Only text are allowed
+            <br /><br />
+          </div>
+
+          <label for="emailId">Email Id*:</label>
+          <input
+            type="text"
+            name="emailId"
+            id="emailId"
+            placeholder="yourname@northeastern.edu"
+            autocomplete="off"
+            onblur="validateInputs(this,3)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgEmailId" style="display: none; color: red">
+            Invalid input for the email field. Enter valid email id.
+            <br /><br />
+          </div>
+
+          <label for="phoneNumber">Phone Number*:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="xxx-xxx-xxxx"
+            autocomplete="off"
+            onblur="validateInputs(this,4)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgPhone" style="display: none; color: red">
+            Invalid input for the phone number field. Enter valid phone number.
+            <br /><br />
+          </div>
+
+          <label for="streetAddress1">Street Address 1*:</label>
+          <input
+            type="text"
+            name="streetAddress1"
+            id="streetAddress1"
+            placeholder="address"
+            autocomplete="off"
+            onblur="validateInputs(this,5)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgAddress" style="display: none; color: red">
+            Please enter street address.
+            <br /><br />
+          </div>
+
+          <label for="streetAddress2">Street Address 2:</label>
+          <input
+            type="text"
+            name="streetAddress2"
+            id="streetAddress2"
+            placeholder="address"
+            autocomplete="off"
+          />
+          <br /><br />
+
+          <label for="city">City*:</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="city"
+            autocomplete="off"
+            onblur="validateInputs(this,6)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgCity" style="display: none; color: red">
+            Invalid input for the city name. Only text are allowed
+            <br /><br />
+          </div>
+
+          <label for="state">State*:</label>
+          <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="state"
+            autocomplete="off"
+            onblur="validateInputs(this,7)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgState" style="display: none; color: red">
+            Invalid input for the state name. Only text are allowed
+            <br /><br />
+          </div>
+
+          <label for="zipcode">ZipCode*:</label>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            placeholder="xxxxxx"
+            autocomplete="off"
+            onblur="validateInputs(this,8)"
+            required="required"
+          />
+          <br /><br />
+
+          <div id="errorMsgZip" style="display: none; color: red">
+            Invalid input for the zip code. Enter a proper zip code
+            <br /><br />
+          </div>
+
+          <label>How did you hear*:</label>
+          <input type="checkbox" name="source" value="facebook" /> Facebook
+          <input type="checkbox" name="source" value="google" /> Google
+          <input type="checkbox" name="source" value="yelp" /> Yelp <br /><br />
+
+
+          <label for="dropDown">Career Goal*:</label>
+          <select
+            name="dropDown"
+            id="dropDown"
+            onchange="generateCheckBox(this)"
+          >
+            <option value="">*Select an option*</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Astronaut">Astronaut</option>
+            <option value="Police">Police</option>
+          </select>
+          <br /><br />
+          <input
+            type="checkbox"
+            name="check"
+            id="check"
+            style="display: none"
+            onclick="generateTextField(this)"
+          />
+          <div id="checkBoxText" style="display: inline"></div>
+          <br /><br />
+
+          <label for="textField" id="labelTextField" style="display: none"
+            >Tell us more about your dream job*:</label
+          >
+          <input
+            type="text"
+            name="textField"
+            id="textField"
+            required="required"
+            style="display: none"
+          />
+          <br /><br />
+
+          <label for="comments">Comments*:</label>
+          <textarea
+            name="text"
+            id="comments"
+            placeholder="Your comments"
+            rows="5"
+            cols="25"
+            onblur="validateInputs(this,9)"
+            required="required"
+          ></textarea>
+          <br /><br />
+
+          <div id="errorMsgComments" style="display: none; color: red">
+            Please enter your comments.
+            <br /><br />
+          </div>
+          <input type="Submit" value="Submit" />
+          <input type="Reset" />
+          <br /><br />
+        </form>
+      </main>
+    </div>
+
+    <script>
+      window.onload = function (){
+        document.getElementById("myForm").reset();
+      }
+    
+        function generateCheckBox(selectObject) {
+        if (selectObject.value == "") {
+          document.getElementById("check").style.display = "none";
+          document.getElementById("checkBoxText").innerHTML = "";
+        } else {
+          document.getElementById("check").style.display = "inline";
+          document.getElementById("checkBoxText").innerHTML =
+            "Check this to tell us more about how you heard via " +
+            selectObject.value;
+        }
+      }
+
+      function generateTextField(input){
+        if(input.checked){
+          document.getElementById("labelTextField").style.display = "block";
+          document.getElementById("textField").style.display = "block";
+        }else{
+          document.getElementById("labelTextField").style.display = "none";
+          document.getElementById("textField").style.display = "none";
+        }
+      }
+
+      function validateInputs(object, type, nameType) {
+        var regExName = /^[a-zA-Z]+$/;
+        var regExEmail = /([\w\.]+)@northeastern.edu/;
+        var regExPhone = /\d{10}$/;
+        var regExZip = /\d{5}$/;
+
+        switch (type) {
+          case 1:
+            if (!object.value.trim().match(regExName)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgFName").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgFName").style.display = "none";
+            }
+            break;
+          case 2:
+            if (!object.value.trim().match(regExName)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgLName").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgLName").style.display = "none";
+            }
+            break;
+          case 3:
+            if (!object.value.match(regExEmail)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgEmailId").style.display =
+                "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgEmailId").style.display = "none";
+            }
+            break;
+          case 4:
+            if (!object.value.match(regExPhone)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgPhone").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgPhone").style.display = "none";
+            }
+            break;
+          case 5:
+            if (object.value.trim() == "") {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgAddress").style.display =
+                "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgAddress").style.display = "none";
+            }
+            break;
+          case 6:
+            if (!object.value.trim().match(regExName)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgCity").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgCity").style.display = "none";
+            }
+            break;
+          case 7:
+            if (!object.value.trim().match(regExName)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgState").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgState").style.display = "none";
+            }
+            break;
+          case 8:
+            if (!object.value.match(regExZip)) {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgZip").style.display = "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgZip").style.display = "none";
+            }
+            break;
+          case 9:
+            if (object.value.trim() == "") {
+              object.style.border = "2px solid red";
+              document.getElementById("errorMsgComments").style.display =
+                "block";
+              object.value = "";
+            } else {
+              object.style.border = "";
+              document.getElementById("errorMsgComments").style.display =
+                "none";
+            }
+            break;
+        }
+      }
+    </script>
+    <!-- <title>Document</title>
+    <style>
+        th,td,table{
+            border: 1px solid rgb(57, 73, 128);
+        }
+    </style>
+
+<table id="dataTable" method="SET" action="Form.html">
+  <tr>
+    <th>Title</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email ID</th>
+    <th>Phone Number</th>
+    <th>Street Address 1</th>
+    <th>Street Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+    <th>Source</th>
+    <th>Drop Down</th>
+    <th>Check Box Test</th>
+    <th>Text Field</th>
+    <th>Comments</th>
+  </tr>
+</table>
+
+<script>
+    var url = new URL(Form.html);
+    var row = document.getElementById("dataTable").insertRow(1);
+    row.insertCell(0).innerHTML = url.searchParams.get("title");
+    row.insertCell(1).innerHTML = url.searchParams.get("firstName");
+    row.insertCell(2).innerHTML = url.searchParams.get("lastName");
+    row.insertCell(3).innerHTML = url.searchParams.get("emailId");
+    row.insertCell(4).innerHTML = url.searchParams.get("phoneNumber");
+    row.insertCell(5).innerHTML = url.searchParams.get("streetAddress1");
+    row.insertCell(6).innerHTML = url.searchParams.get("streetAddress2");
+    row.insertCell(7).innerHTML = url.searchParams.get("city");
+    row.insertCell(8).innerHTML = url.searchParams.get("state");
+    row.insertCell(9).innerHTML = url.searchParams.get("zipcode");
+    row.insertCell(10).innerHTML = url.searchParams.get("source");
+    row.insertCell(11).innerHTML = url.searchParams.get("dropDown");
+    row.insertCell(12).innerHTML = url.searchParams.get("check");
+    row.insertCell(13).innerHTML = url.searchParams.get("textField");
+    row.insertCell(14).innerHTML = url.searchParams.get("text");
+</script> -->
+  </body>
+</html>

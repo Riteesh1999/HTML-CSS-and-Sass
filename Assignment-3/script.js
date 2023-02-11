@@ -14,7 +14,7 @@ var socialMedia = {
   youtube: 'http://youtube.com'
 };
 
-var downArrowFlags = [true, true, true];
+var downArrowFlags = [true];
 var checkedList = [];
 var checkBoxFlags = [true, true, true];
 

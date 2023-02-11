@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+        th,td,table{
+            border: 1px solid rgb(57, 73, 128);
+        }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" method="GET" action="Form.html">
+      <tr>
+        <th>Title</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email ID</th>
+        <th>Phone Number</th>
+        <th>Street Address 1</th>
+        <th>Street Address 2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Source</th>
+        <th>Drop Down</th>
+        <th>Check Box Test</th>
+        <th>Text Field</th>
+        <th>Comments</th>
+      </tr>
+    </table>
+
+    <script>
+        var url = new URL(Users/riteesh/Downloads/Assignment4/Form.html);
+        var row = document.getElementById("dataTable").insertRow(1);
+        row.insertCell(0).innerHTML = url.searchParams.get("title");
+        row.insertCell(1).innerHTML = url.searchParams.get("firstName");
+        row.insertCell(2).innerHTML = url.searchParams.get("lastName");
+        row.insertCell(3).innerHTML = url.searchParams.get("emailId");
+        row.insertCell(4).innerHTML = url.searchParams.get("phoneNumber");
+        row.insertCell(5).innerHTML = url.searchParams.get("streetAddress1");
+        row.insertCell(6).innerHTML = url.searchParams.get("streetAddress2");
+        row.insertCell(7).innerHTML = url.searchParams.get("city");
+        row.insertCell(8).innerHTML = url.searchParams.get("state");
+        row.insertCell(9).innerHTML = url.searchParams.get("zipcode");
+        row.insertCell(10).innerHTML = url.searchParams.get("source");
+        row.insertCell(11).innerHTML = url.searchParams.get("dropDown");
+        row.insertCell(12).innerHTML = url.searchParams.get("check");
+        row.insertCell(13).innerHTML = url.searchParams.get("textField");
+        row.insertCell(14).innerHTML = url.searchParams.get("text");
+    </script>
+  </body>
+</html>
