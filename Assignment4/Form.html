@@ -22,7 +22,7 @@
       <main>
         <h2>Feedback</h2>
         <h3>Want to know where you are heading? Come join Us!!!</h3>
-        Note : Fields marked with an asterisk(*) are mandatory
+        Note : Fields marked with an asterisk(*) are mandatory fields
         <br /><br />
 
         <form id="myform" method="SET" action="Submit.html">
@@ -261,6 +261,9 @@
     </div>
 
     <script>
+      window.onsubmit = function(){
+        document.getElementById("myForm").reset();
+      }
       window.onload = function (){
         document.getElementById("myForm").reset();
       }

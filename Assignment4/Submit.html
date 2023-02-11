@@ -34,7 +34,7 @@
     </table>
 
     <script>
-        var url = new URL(Users/riteesh/Downloads/Assignment4/Form.html);
+        var url = new URL(window.location);
         var row = document.getElementById("dataTable").insertRow(1);
         row.insertCell(0).innerHTML = url.searchParams.get("title");
         row.insertCell(1).innerHTML = url.searchParams.get("firstName");
