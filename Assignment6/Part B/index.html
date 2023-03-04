@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <h1>Stopwatch</h1>
+    <label id="timer">00:00:00</label>
+    <br>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <script>
+      const timer = document.getElementById("timer");
+      const startButton = document.getElementById("start");
+      const stopButton = document.getElementById("stop");
+      const resetButton = document.getElementById("reset");
+
+      let timerId;
+      let startTime = 0;
+      let elapsedTime = 0;
+
+      async function startTimer() {
+        startTime = Date.now() - elapsedTime;
+        timerId = setInterval(() => {
+          elapsedTime = Date.now() - startTime;
+          timer.innerHTML = formatTime(elapsedTime);
+        }, 10);
+      }
+
+      function stopTimer() {
+        clearInterval(timerId);
+      }
+
+      function resetTimer() {
+        clearInterval(timerId);
+        elapsedTime = 0;
+        timer.innerHTML = formatTime(elapsedTime);
+      }
+
+      function formatTime(time) {
+        const hours = Math.floor(time / 3600000).toString().padStart(2, "0");
+        const minutes = Math.floor((time % 3600000) / 60000).toString().padStart(2, "0");
+        const seconds = Math.floor((time % 60000) / 1000).toString().padStart(2, "0");
+        const milliseconds = Math.floor(time % 1000 / 10).toString().padStart(2, "0");
+        return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+      }
+
+      startButton.addEventListener("click", async () => {
+        await startTimer();
+      });
+
+      stopButton.addEventListener("click", () => {
+        stopTimer();
+      });
+
+      resetButton.addEventListener("click", () => {
+        resetTimer();
+      });
+    </script>
+  </body>
+</html>
