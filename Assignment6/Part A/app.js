@@ -9,18 +9,19 @@ $(document).ready(function() {
 		var password = $('#password').val();
 		var emailRegex = /@northeastern\.edu$/;
 		if (!emailRegex.test(email)) {
-			$('#error').text('Please enter a Northeastern email address.');
+			$('#error').text('Please enter a valid Northeastern email address.');
 			return;
 		}
 		if (password.length < 8) {
-			$('#error').text('Password must be at least 8 characters long.');
+			$('#error').text('Password must at least be 8 characters long.');
 			return;
 		}
+		
 		if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-			$('#error').text('User name can only contain letters, numbers, and underscores.');
+			$('#error').text('Username can only contain letters, numbers, and underscores. Spaces and special characters are not allowed');
 			return;
 		}
-		// all validations passed, redirect to page 2
+		// redirect to page 2 if all validations are passed
 		window.location.href = 'page2.html?username=' + username;
 	});
 
@@ -78,7 +79,7 @@ function calculate(operation) {
 	$('#result').text(result);
 }
 
-// Page 2 username display
+// Display of username in Page 2
 var params = new URLSearchParams(window.location.search);
 var username = params.get('username');
 if (username) {
