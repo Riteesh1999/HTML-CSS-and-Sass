@@ -1,0 +1,23 @@
+@media(max-width:700px){
+    .showcase{
+        height: 700px;
+
+        nav {
+            .logo{
+                font-size: small;
+            }
+        }
+
+        &-content{
+            text-align: center;
+            font-size: 12px;
+            
+            img{
+                display: none;
+            }
+        }
+    }
+
+}
+
+

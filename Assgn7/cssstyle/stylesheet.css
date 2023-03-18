@@ -1,0 +1,161 @@
+.container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  
+  .my-1 {
+    margin: space rem 0;
+  }
+  
+  .my-2 {
+    margin: space rem 0;
+  }
+  
+  .my-3 {
+    margin: space rem 0;
+  }
+  
+  .my-4 {
+    margin: space rem 0;
+  }
+  
+  .my-5 {
+    margin: space rem 0;
+  }
+  
+  .btn-secondary, .btn-primary {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+  }
+  .btn-secondary:hover, .btn-primary:hover {
+    transform: scale(0.98);
+  }
+  
+  .btn-primary {
+    background-color: #fbfafb;
+    color: #333;
+  }
+  
+  .btn-secondary {
+    background-color: #f9f6f9;
+    color: #333;
+  }
+  
+  @media (max-width: 700px) {
+    .showcase {
+      height: 700px;
+    }
+    .showcase nav .logo {
+      font-size: small;
+    }
+    .showcase-content {
+      text-align: center;
+      font-size: 12px;
+    }
+    .showcase-content img {
+      display: none;
+    }
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(183, 84, 84);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .showcase {
+    background-color: rgb(224, 50, 50);
+    color: #333;
+    height: 500px;
+  }
+  .showcase nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .showcase ul {
+    display: flex;
+    list-style-type: none;
+    
+  }
+  .showcase li {
+    padding: 15px;
+  }
+  .showcase a:hover {
+    color: rgb(89, 37, 231);
+  }
+  .showcase a {
+    text-decoration: none;
+  }
+  .showcase-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .showcase img {
+    width: 45%;
+    padding: 10px;
+  }
+  .showcase h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+  .showcase p {
+    margin: 20px 0;
+  }
+  
+  .pro {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  .pro h2 {
+    text-align: center;
+    padding: 20px;
+  }
+  .pro img {
+    width: 100px;
+    height: auto;
+  }
+  .fav-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .fav-grid img {
+    display: flex;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hpro {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  .hpro h2 {
+    text-align: center;
+    padding: 20px;
+  }
+  .hpro img {
+    width: 200px;
+    height: auto;
+    padding: 30px;
+  }
+  .hpro-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-items: center;
+  }
