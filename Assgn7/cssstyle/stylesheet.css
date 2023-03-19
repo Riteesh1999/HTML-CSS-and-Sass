@@ -1,161 +1,249 @@
 .container {
-    max-width: 1100px;
-    padding: 0 30px;
-    margin: 0 auto;
-    overflow: auto;
-  }
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
   
-  .my-1 {
-    margin: space rem 0;
-  }
-  
-  .my-2 {
-    margin: space rem 0;
-  }
-  
-  .my-3 {
-    margin: space rem 0;
-  }
-  
-  .my-4 {
-    margin: space rem 0;
-  }
-  
-  .my-5 {
-    margin: space rem 0;
-  }
-  
-  .btn-secondary, .btn-primary {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 8px 20px;
-    margin: 3px;
-  }
-  .btn-secondary:hover, .btn-primary:hover {
-    transform: scale(0.98);
-  }
-  
-  .btn-primary {
-    background-color: #fbfafb;
-    color: #333;
-  }
-  
-  .btn-secondary {
-    background-color: #f9f6f9;
-    color: #333;
-  }
-  
-  @media (max-width: 700px) {
-    .showcase {
-      height: 700px;
-    }
-    .showcase nav .logo {
-      font-size: small;
-    }
-    .showcase-content {
-      text-align: center;
-      font-size: 12px;
-    }
-    .showcase-content img {
-      display: none;
-    }
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background-color: rgb(183, 84, 84);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-  }
-  
+}
+
+.my-1 {
+  margin: space rem 0;
+}
+
+.my-2 {
+  margin: space rem 0;
+}
+
+.my-3 {
+  margin: space rem 0;
+}
+
+.my-4 {
+  margin: space rem 0;
+}
+
+.my-5 {
+  margin: space rem 0;
+}
+
+.btn-secondary, .btn-primary {
+  display: inline-block;
+  color: #020202;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+}
+.btn-secondary:hover, .btn-primary:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #fbfafb;
+  color: #333;
+}
+
+.btn-secondary {
+  background-color: #f9f6f9;
+  color: rgb(222, 213, 213);
+}
+
+@media (max-width: 700px) {
   .showcase {
-    background-color: rgb(224, 50, 50);
-    color: #333;
-    height: 500px;
+    height: 700px;
   }
-  .showcase nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .showcase ul {
-    display: flex;
-    list-style-type: none;
-    
-  }
-  .showcase li {
-    padding: 15px;
-  }
-  .showcase a:hover {
-    color: rgb(89, 37, 231);
-  }
-  .showcase a {
-    text-decoration: none;
+  .showcase nav .logo {
+    font-size: small;
   }
   .showcase-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .showcase img {
-    width: 45%;
-    padding: 10px;
-  }
-  .showcase h1 {
-    font-size: 42px;
-    line-height: 1.2;
-  }
-  .showcase p {
-    margin: 20px 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
   }
   
-  .pro {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
+  .showcase-content img {
+    display: none;
   }
-  .pro h2 {
-    text-align: center;
-    padding: 20px;
-  }
-  .pro img {
-    width: 100px;
-    height: auto;
-  }
-  .fav-grid {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
-  .fav-grid img {
-    display: flex;
-    margin: 40px;
-    align-items: center;
-    justify-content: center;
-  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 250, 250);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   
-  .hpro {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-  }
-  .hpro h2 {
-    text-align: center;
-    padding: 20px;
-  }
-  .hpro img {
-    width: 200px;
-    height: auto;
-    padding: 30px;
-  }
-  .hpro-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    place-items: center;
-  }
+  
+}
+
+.showcase {
+  background-color: rgb(2, 1, 1);
+  color: rgb(243, 238, 238);
+  height: 500px;
+  
+}
+.showcase nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showcase ul {
+  display: flex;
+  list-style-type: none;
+  
+}
+.showcase li {
+  padding: 15px;
+}
+.showcase a:hover {
+  color: rgb(89, 37, 231);
+}
+.showcase a {
+  text-decoration: none;
+}
+.showcase-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+ 
+}
+.showcase img {
+  width: 45%;
+  padding: 10px;
+}
+.showcase h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+.showcase p {
+  margin: 20px 0;
+}
+
+.pro {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.pro h2 {
+  text-align: center;
+  padding: 20px;
+}
+.pro img {
+  width: 100px;
+  height: auto;
+}
+.fav-grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.fav-grid img {
+  display: flex;
+  margin: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hpro {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.hpro h2 {
+  text-align: center;
+  padding: 20px;
+}
+.hpro img {
+  width: 200px;
+  height: auto;
+  padding: 30px;
+}
+.hpro-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-items: center;
+}
+
+img{
+  border-radius: 10%;
+}
+
+img:hover{
+  transform: scale(1.5);
+
+}
+
+.logoo{
+  scale: .1;
+  padding: 0%;
+  margin-bottom: 0%;
+}
+
+img.logoo:hover{
+  transform: scale(1);
+}
+
+img.main:hover{
+  transform: scale(1);
+
+
+}
+
+.new_body{
+  background-image: url("red-lamborghini-aventador-rear-view-qw9a5hw4kic5bn1k.jpg");
+  background-color: #f9f6f9;
+}
+
+
+
+.topnav {
+  background-color: rgb(252, 249, 249);
+  color: black;
+  overflow: hidden;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #030303;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(2, 2, 2);
+  color: rgb(254, 253, 253);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #020202;
+  color: white;
+}
+
+h1{
+  font-family: cursive;
+  font-size: xx-large;
+}
+
+h2.bodyy{
+  color: black;
+}
+
+.banner{
+  background-image: url(images/red-lamborghini-aventador-rear-view-qw9a5hw4kic5bn1k.jpg);
+}
+
+p{
+  line-height: 3;
+}
