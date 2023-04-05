@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 
 routes(app);
 
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8080
 
 app.listen(port, () => {
   console.log(`Node.JS App Running at http://localhost:${port}`)
